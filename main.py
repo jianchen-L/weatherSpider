@@ -34,7 +34,7 @@ for date in time:
  
         sql = """insert into weather_spider(time_local, link, weather_type, temperature, wind_power) \
                 values(%s, %s, %s, %s, %s)"""
-        cursor.execute(sql,(title,href,weather,wendu,fengli))
+        cursor.execute(sql, (title, href, weather, wendu, fengli))
         db.commit()
     print("  已经爬取"+date+"数据")
 db.close
