@@ -35,6 +35,5 @@ for date in time:
                 values(%s, %s, %s, %s, %s)"""
         cursor.execute(sql, (title, href, weather, wendu, fengli))
         db.commit()
-    print("  已经爬取"+date+"数据")
 db.close
-print('结束')
+print('爬取完成')

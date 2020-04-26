@@ -2,10 +2,9 @@ import pymysql
 import pyecharts.options as opts
 from pyecharts.charts import Line, Pie
 
-db = pymysql.connect(host="localhost", user="root", passwd="Zeng&98426", db="weather", charset='utf8' )
-cursor = db.cursor()
-
 def create_temp():
+    db = pymysql.connect(host="localhost", user="root", passwd="Zeng&98426", db="weather", charset='utf8' )
+    cursor = db.cursor()
     cursor.execute('SELECT * FROM weather_spider;')
     data = cursor.fetchall()
     max_temp_list = []
@@ -27,6 +26,8 @@ def create_temp():
     cursor.close()
 
 def create_weather():
+    db = pymysql.connect(host="localhost", user="root", passwd="Zeng&98426", db="weather", charset='utf8' )
+    cursor = db.cursor()
     attr = ["雨", "多云", "晴", "阴", "雪", "雾", "霾"]
     rain = cursor.execute('SELECT * FROM weather_spider WHERE weather_type like "%雨%";')
     cloud = cursor.execute('SELECT * FROM weather_spider WHERE weather_type like "%多云%";')
@@ -50,5 +51,5 @@ def create_weather():
 
 
 if __name__ == '__main__':
-    create_temp(cursor)
-    create_weather(cursor)
+    create_temp()
+    create_weather()
