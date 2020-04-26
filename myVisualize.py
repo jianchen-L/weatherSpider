@@ -16,9 +16,29 @@ def create_temp():
         day_list.append(d[0][:11])
     line = Line()
     line.add_xaxis(day_list)
-    line.add_yaxis("最高温度",max_temp_list)
-    line.add_yaxis("最低温度",min_temp_list)
-    line.set_global_opts(yaxis_opts=opts.AxisOpts(name="温度（℃）"), title_opts=opts.TitleOpts(title="南京气温变化表"))
+    line.add_yaxis(series_name="最高气温", y_axis=max_temp_list, is_symbol_show = False, 
+        markpoint_opts=opts.MarkPointOpts(
+            data=[
+                opts.MarkPointItem(type_="max", name="最大值"),
+                opts.MarkPointItem(type_="min", name="最小值"),
+            ]
+        ),
+        markline_opts=opts.MarkLineOpts(
+            data=[opts.MarkLineItem(type_="average", name="平均值")]
+        ))
+    line.add_yaxis(series_name="最低气温", y_axis=min_temp_list, is_symbol_show = False, 
+        markpoint_opts=opts.MarkPointOpts(
+            data=[
+                opts.MarkPointItem(type_="max", name="最大值"),
+                opts.MarkPointItem(type_="min", name="最小值"),
+            ]
+        ),
+        markline_opts=opts.MarkLineOpts(
+            data=[opts.MarkLineItem(type_="average", name="平均值")]
+        ))
+    line.set_global_opts(yaxis_opts=opts.AxisOpts(name="温度（℃）"), 
+        title_opts=opts.TitleOpts(title="南京气温变化表"), 
+        tooltip_opts=opts.TooltipOpts(trigger="axis"))
     
     line.render('南京2019气温变化表.html')
     print('气温图生成成功')

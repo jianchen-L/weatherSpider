@@ -7,11 +7,11 @@
 
 </head>
 <body>
-    <div id="f5dac89146714a6095f6c89e273188e5" class="chart-container" style="width:900px; height:500px;"></div>
+    <div id="f1a11038879141fd932b1c725d0c5e18" class="chart-container" style="width:900px; height:500px;"></div>
     <script>
-        var chart_f5dac89146714a6095f6c89e273188e5 = echarts.init(
-            document.getElementById('f5dac89146714a6095f6c89e273188e5'), 'white', {renderer: 'canvas'});
-        var option_f5dac89146714a6095f6c89e273188e5 = {
+        var chart_f1a11038879141fd932b1c725d0c5e18 = echarts.init(
+            document.getElementById('f1a11038879141fd932b1c725d0c5e18'), 'white', {renderer: 'canvas'});
+        var option_f1a11038879141fd932b1c725d0c5e18 = {
     "animation": true,
     "animationThreshold": 2000,
     "animationDuration": 1000,
@@ -49,10 +49,10 @@
     "series": [
         {
             "type": "line",
-            "name": "\u6700\u9ad8\u6e29\u5ea6",
+            "name": "\u6700\u9ad8\u6c14\u6e29",
             "connectNulls": false,
             "symbolSize": 4,
-            "showSymbol": true,
+            "showSymbol": false,
             "smooth": false,
             "step": false,
             "data": [
@@ -1533,15 +1533,48 @@
             "areaStyle": {
                 "opacity": 0
             },
+            "markPoint": {
+                "label": {
+                    "show": true,
+                    "position": "inside",
+                    "color": "#fff",
+                    "margin": 8
+                },
+                "data": [
+                    {
+                        "name": "\u6700\u5927\u503c",
+                        "type": "max"
+                    },
+                    {
+                        "name": "\u6700\u5c0f\u503c",
+                        "type": "min"
+                    }
+                ]
+            },
+            "markLine": {
+                "silent": false,
+                "precision": 2,
+                "label": {
+                    "show": true,
+                    "position": "top",
+                    "margin": 8
+                },
+                "data": [
+                    {
+                        "name": "\u5e73\u5747\u503c",
+                        "type": "average"
+                    }
+                ]
+            },
             "zlevel": 0,
             "z": 0
         },
         {
             "type": "line",
-            "name": "\u6700\u4f4e\u6e29\u5ea6",
+            "name": "\u6700\u4f4e\u6c14\u6e29",
             "connectNulls": false,
             "symbolSize": 4,
-            "showSymbol": true,
+            "showSymbol": false,
             "smooth": false,
             "step": false,
             "data": [
@@ -3022,6 +3055,39 @@
             "areaStyle": {
                 "opacity": 0
             },
+            "markPoint": {
+                "label": {
+                    "show": true,
+                    "position": "inside",
+                    "color": "#fff",
+                    "margin": 8
+                },
+                "data": [
+                    {
+                        "name": "\u6700\u5927\u503c",
+                        "type": "max"
+                    },
+                    {
+                        "name": "\u6700\u5c0f\u503c",
+                        "type": "min"
+                    }
+                ]
+            },
+            "markLine": {
+                "silent": false,
+                "precision": 2,
+                "label": {
+                    "show": true,
+                    "position": "top",
+                    "margin": 8
+                },
+                "data": [
+                    {
+                        "name": "\u5e73\u5747\u503c",
+                        "type": "average"
+                    }
+                ]
+            },
             "zlevel": 0,
             "z": 0
         }
@@ -3029,12 +3095,12 @@
     "legend": [
         {
             "data": [
-                "\u6700\u9ad8\u6e29\u5ea6",
-                "\u6700\u4f4e\u6e29\u5ea6"
+                "\u6700\u9ad8\u6c14\u6e29",
+                "\u6700\u4f4e\u6c14\u6e29"
             ],
             "selected": {
-                "\u6700\u9ad8\u6e29\u5ea6": true,
-                "\u6700\u4f4e\u6e29\u5ea6": true
+                "\u6700\u9ad8\u6c14\u6e29": true,
+                "\u6700\u4f4e\u6c14\u6e29": true
             },
             "show": true,
             "padding": 5,
@@ -3045,7 +3111,7 @@
     ],
     "tooltip": {
         "show": true,
-        "trigger": "item",
+        "trigger": "axis",
         "triggerOn": "mousemove|click",
         "axisPointer": {
             "type": "line"
@@ -3477,7 +3543,7 @@
         }
     ]
 };
-        chart_f5dac89146714a6095f6c89e273188e5.setOption(option_f5dac89146714a6095f6c89e273188e5);
+        chart_f1a11038879141fd932b1c725d0c5e18.setOption(option_f1a11038879141fd932b1c725d0c5e18);
     </script>
 </body>
 </html>
