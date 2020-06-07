@@ -2,7 +2,7 @@ import pymysql
 import requests
 from bs4 import BeautifulSoup
  
-db = pymysql.connect(host="localhost", user="root", passwd="Zeng&98426", db="weather", charset='utf8' )
+db = pymysql.connect(host="localhost", user="root", passwd="123456", db="weather", charset='utf8' )
 cursor = db.cursor()
  
 #获取网页信息
